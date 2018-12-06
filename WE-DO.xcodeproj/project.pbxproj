@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C4598DAB21B7F72400AB1EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */; };
-		C4598DAD21B7F72400AB1EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4598DAC21B7F72400AB1EAE /* ViewController.swift */; };
 		C4598DB021B7F72400AB1EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4598DAE21B7F72400AB1EAE /* Main.storyboard */; };
 		C4598DB221B7F72700AB1EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4598DB121B7F72700AB1EAE /* Assets.xcassets */; };
 		C4598DB521B7F72700AB1EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4598DB321B7F72700AB1EAE /* LaunchScreen.storyboard */; };
 		C4598DC021B7F72700AB1EAE /* WE_DOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4598DBF21B7F72700AB1EAE /* WE_DOTests.swift */; };
+		C479E05721B876D1007D8C10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C479E05621B876D1007D8C10 /* GoogleService-Info.plist */; };
+		C479E05921B97D65007D8C10 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479E05821B97D65007D8C10 /* AuthVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,6 @@
 /* Begin PBXFileReference section */
 		C4598DA721B7F72400AB1EAE /* WE-DO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WE-DO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4598DAC21B7F72400AB1EAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4598DAF21B7F72400AB1EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4598DB121B7F72700AB1EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4598DB421B7F72700AB1EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		C4598DBB21B7F72700AB1EAE /* WE-DOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WE-DOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4598DBF21B7F72700AB1EAE /* WE_DOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WE_DOTests.swift; sourceTree = "<group>"; };
 		C4598DC121B7F72700AB1EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C479E05621B876D1007D8C10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C479E05821B97D65007D8C10 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */,
-				C4598DAC21B7F72400AB1EAE /* ViewController.swift */,
 				C4598DAE21B7F72400AB1EAE /* Main.storyboard */,
 				C4598DB121B7F72700AB1EAE /* Assets.xcassets */,
 				C4598DB321B7F72700AB1EAE /* LaunchScreen.storyboard */,
 				C4598DB621B7F72700AB1EAE /* Info.plist */,
+				C479E05621B876D1007D8C10 /* GoogleService-Info.plist */,
+				C479E05821B97D65007D8C10 /* AuthVC.swift */,
 			);
 			path = "WE-DO";
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				C4598DB521B7F72700AB1EAE /* LaunchScreen.storyboard in Resources */,
 				C4598DB221B7F72700AB1EAE /* Assets.xcassets in Resources */,
 				C4598DB021B7F72400AB1EAE /* Main.storyboard in Resources */,
+				C479E05721B876D1007D8C10 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4598DAD21B7F72400AB1EAE /* ViewController.swift in Sources */,
+				C479E05921B97D65007D8C10 /* AuthVC.swift in Sources */,
 				C4598DAB21B7F72400AB1EAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
