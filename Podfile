@@ -4,8 +4,14 @@
 target 'WE-DO' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-	pod 'Firebase'
-  
+	
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'Fabric'
+    pod 'Crashlytics'
+    pod 'Firebase/Storage'
+    
+    pod 'Firebase/Auth'
 	  pod 'FacebookCore', :git => 'https://github.com/facebook/facebook-sdk-swift', :branch => 'master'
 	  pod 'FacebookLogin'
 	  pod 'Geofirestore'
