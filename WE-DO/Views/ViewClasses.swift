@@ -57,6 +57,7 @@ class WDTagButton: UIButton {
     
     func changeBorderColor(_ color:UIColor){
         layer.borderColor = color.cgColor
+        setTitleColor(color, for: .normal)
     }
 }
 
@@ -77,19 +78,51 @@ class BaseTextField:UITextField{
         return bounds.inset(by: padding)
     }
     
+
+    
 }
 
 
-class SearchBar:BaseTextField{
+class SearchBar:UITextField{
    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
-        layer.cornerRadius = 15
-        
+        layout()
+    }
+    
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame:frame)
+        layout()
+    }
+    
+    func layout(){
+        backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.55)
+        layer.cornerRadius = 20
+        textColor = UIColor.primary
         font = UIFont.systemFont(ofSize: 16, weight: .medium)
         attributedPlaceholder = NSAttributedString(string: "Search...", attributes: [.foregroundColor: UIColor.primaryLight])
         placeholder = attributedPlaceholder?.string
+    }
+    let padding = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 8)
+    
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        
+        return bounds.inset(by: padding)
+    }
+    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     

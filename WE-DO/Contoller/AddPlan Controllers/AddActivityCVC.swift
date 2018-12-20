@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mensah Shadrach. All rights reserved.
 //
 
-import MapKit
+import GooglePlaces
 
 class AddActivityCVC: UIViewController {
 
@@ -17,7 +17,7 @@ class AddActivityCVC: UIViewController {
     @IBOutlet weak var activityDate: UITextField!
     @IBOutlet weak var activtyName: UITextField!
     private var date:Date?
-    private var mapItem:MKMapItem?
+    private var place:GMSPlace?
     var tags:[WDActivityTags]!
     var selectedtags:Set<String>!
     private lazy var datepicker: UIDatePicker = {
@@ -50,17 +50,23 @@ class AddActivityCVC: UIViewController {
 //        if let parent = parent as? AddPlanVC{
 //            parent.addMapVC()
 //        }
-        if let mpv = storyboard?.instantiateViewController(withIdentifier: identifier(PlanMapCVC.self)) as? PlanMapCVC{
-            self.addChild(mpv)
-            view.addSubview(mpv.view)
-            mpv.didMove(toParent: self)
-        }
+//        if let mpv = storyboard?.instantiateViewController(withIdentifier: identifier(PlanMapCVC.self)) as? PlanMapCVC{
+//            self.addChild(mpv)
+//            view.addSubview(mpv.view)
+//            mpv.didMove(toParent: self)
+//        }
+        let mapVc = GSMapVC()
+        mapVc.delegate = self
+        self.present(mapVc, animated: true, completion: nil)
+//        self.add(mapVc)
+//        view.addSubview(mapVc.view)
+//        mapVc.didMove(toParent: self)
     }
     
-    func triggerUpdate(mapItem:MKMapItem?){
-        self.mapItem = mapItem
-        if mapItem != nil{
-            locationLabl.text = mapItem?.name ?? ""
+    func triggerUpdate(place:GMSPlace?){
+        
+        if  place != nil{
+            locationLabl.text = place?.name ?? ""
             locationButt.setTitle("Activity Location", for: .normal)
             addActivity.isEnabled = true
             addActivity.backgroundColor = UIColor.primaryLight
@@ -70,8 +76,8 @@ class AddActivityCVC: UIViewController {
     
     @IBAction func addActivity(_ sender: Any) {
         
-        if date != nil && activtyName.text! != "" && mapItem != nil {
-            let loc = WDEventLocation(name: mapItem!.name!, lat: mapItem!.placemark.coordinate.latitude, lon: mapItem!.placemark.coordinate.longitude,url:mapItem?.url, phone:mapItem?.phoneNumber)
+        if date != nil && activtyName.text! != "" && place != nil {
+            let loc = WDEventLocation(id:place!.placeID, name: place!.name, lat: place!.coordinate.latitude, lon: place!.coordinate.longitude,url:place!.website, phone:place!.phoneNumber, attributes: place!.attributions)
             let activity = WDActivity(title: activtyName.text!, date: date!, location: loc, set: selectedtags)
             if let parent = parent as? AddPlanVC{
                 parent.updateActivities(activity: activity)
@@ -154,5 +160,15 @@ extension AddActivityCVC:UICollectionViewDelegate,UICollectionViewDataSource,UIC
             cell.debounce()
         }
     }
+    
+}
+
+
+extension AddActivityCVC:PlaceSelected{
+    func didFinishSelecting(_ place: GMSPlace?) {
+        self.place = place
+        triggerUpdate(place: place)
+    }
+    
     
 }

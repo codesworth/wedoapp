@@ -63,6 +63,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow We-Do to use your location. Location data will not be shared to any other third party</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow We-Do to use your location. Location data will not be shared to any other third party</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow We-Do to use your location. Location data will not be shared to any other third party</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow We-Do to use your location. Location data will not be shared to any other third party</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We-Do will like to access your photo Library</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

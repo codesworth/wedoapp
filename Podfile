@@ -15,6 +15,10 @@ target 'WE-DO' do
 	  pod 'FacebookCore', :git => 'https://github.com/facebook/facebook-sdk-swift', :branch => 'master'
 	  pod 'FacebookLogin'
 	  pod 'Geofirestore'
+      pod 'GoogleMaps'
+      pod 'GooglePlaces'
+      pod 'SDWebImage', '~> 4.0'
+      pod 'FirebaseUI/Storage', '~> 5.0'
   # Pods for WE-DO
 
   target 'WE-DOTests' do

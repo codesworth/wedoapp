@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		723D8EC7ACF68F8D273A1981 /* Pods_WE_DO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36803BF0CADC34349B3774F4 /* Pods_WE_DO.framework */; };
 		83267B32B0664E914226F4C5 /* Pods_WE_DOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D978D2B0AF532385DF8A870B /* Pods_WE_DOTests.framework */; };
+		C404D48A21C8725500C2FC76 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404D48921C8725500C2FC76 /* WelcomeVC.swift */; };
+		C425D90B21BFE79D007BF62E /* WDActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425D90921BFE79D007BF62E /* WDActivityCell.swift */; };
+		C425D90C21BFE79D007BF62E /* WDActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C425D90A21BFE79D007BF62E /* WDActivityCell.xib */; };
+		C432E15A21CBB27F009C8A2B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432E15921CBB27F009C8A2B /* Enums.swift */; };
 		C43EED4721BBEAAA00529981 /* AddPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43EED4621BBEAAA00529981 /* AddPlanVC.swift */; };
 		C4598DAB21B7F72400AB1EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */; };
 		C4598DB021B7F72400AB1EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4598DAE21B7F72400AB1EAE /* Main.storyboard */; };
 		C4598DB221B7F72700AB1EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4598DB121B7F72700AB1EAE /* Assets.xcassets */; };
 		C4598DB521B7F72700AB1EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4598DB321B7F72700AB1EAE /* LaunchScreen.storyboard */; };
 		C4598DC021B7F72700AB1EAE /* WE_DOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4598DBF21B7F72700AB1EAE /* WE_DOTests.swift */; };
+		C470EF6D21C8FCC5008173C1 /* EmailAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470EF6C21C8FCC5008173C1 /* EmailAuthVC.swift */; };
+		C470EF6F21C962CA008173C1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470EF6E21C962CA008173C1 /* AuthService.swift */; };
 		C479E05721B876D1007D8C10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C479E05621B876D1007D8C10 /* GoogleService-Info.plist */; };
 		C493862B21BD75A4003C5B4C /* PlanMapCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493862A21BD75A4003C5B4C /* PlanMapCVC.swift */; };
 		C493862D21BD75DA003C5B4C /* AddActivityCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493862C21BD75DA003C5B4C /* AddActivityCVC.swift */; };
@@ -25,7 +31,7 @@
 		C493863721BD7AD0003C5B4C /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493863421BD7ACF003C5B4C /* UIColorInputError.swift */; };
 		C493863921BD8586003C5B4C /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493863821BD8586003C5B4C /* CustomLabel.swift */; };
 		C49F762421B9D441007A79B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762321B9D441007A79B8 /* Constants.swift */; };
-		C49F762821B9D4A2007A79B8 /* Enums+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762721B9D4A2007A79B8 /* Enums+Extensions.swift */; };
+		C49F762821B9D4A2007A79B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762721B9D4A2007A79B8 /* Extensions.swift */; };
 		C49F762A21B9D827007A79B8 /* ViewClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762921B9D827007A79B8 /* ViewClasses.swift */; };
 		C49F762C21B9DA77007A79B8 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762B21B9DA77007A79B8 /* AuthVC.swift */; };
 		C4A19F0821BA8132004ED293 /* WDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A19F0721BA8132004ED293 /* WDUser.swift */; };
@@ -34,8 +40,22 @@
 		C4A19F0E21BA9BDB004ED293 /* WDActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A19F0D21BA9BDB004ED293 /* WDActivity.swift */; };
 		C4A19F1021BA9F26004ED293 /* WDTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A19F0F21BA9F26004ED293 /* WDTags.swift */; };
 		C4A19F1221BAA519004ED293 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A19F1121BAA519004ED293 /* HomeVC.swift */; };
+		C4B635F921C6E90F00BFC71A /* MaterialButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F221C6E8FC00BFC71A /* MaterialButtons.swift */; };
+		C4B635FA21C6E90F00BFC71A /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F321C6E8FF00BFC71A /* MaterialView.swift */; };
+		C4B635FB21C6E90F00BFC71A /* ShadowViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F421C6E90200BFC71A /* ShadowViews.swift */; };
+		C4B635FC21C6E90F00BFC71A /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F521C6E90600BFC71A /* MaterialTextField.swift */; };
+		C4B635FD21C6E90F00BFC71A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F621C6E90900BFC71A /* GradientView.swift */; };
+		C4B635FE21C6E90F00BFC71A /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F721C6E90C00BFC71A /* CustomImageView.swift */; };
+		C4B635FF21C6E90F00BFC71A /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B635F821C6E90F00BFC71A /* RoundTextField.swift */; };
+		C4C272C221C0675E00EDED51 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C272C121C0675D00EDED51 /* SwiftyJSON.swift */; };
 		C4D35F8B21BC8C32008E27E3 /* MapSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D35F8921BC8C32008E27E3 /* MapSearchCell.swift */; };
 		C4D35F8C21BC8C32008E27E3 /* MapSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D35F8A21BC8C32008E27E3 /* MapSearchCell.xib */; };
+		C4E7E2B021C6418900FD68E9 /* PlacesPhotoEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7E2AF21C6418900FD68E9 /* PlacesPhotoEngine.swift */; };
+		C4E7E2B221C6C26400FD68E9 /* InviteeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7E2B121C6C26400FD68E9 /* InviteeVC.swift */; };
+		C4E7E2B521C6C33900FD68E9 /* InviteeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7E2B321C6C33900FD68E9 /* InviteeCell.swift */; };
+		C4E7E2B621C6C33900FD68E9 /* InviteeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E7E2B421C6C33900FD68E9 /* InviteeCell.xib */; };
+		C4FD7B1F21C5A7A40098D5A9 /* GSMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FD7B1E21C5A7A40098D5A9 /* GSMapVC.swift */; };
+		C4FD7B2121C5DEB70098D5A9 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FD7B2021C5DEB70098D5A9 /* LoggerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +72,10 @@
 		36803BF0CADC34349B3774F4 /* Pods_WE_DO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WE_DO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5BC3C91705584647D88572 /* Pods-WE-DO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WE-DO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WE-DO/Pods-WE-DO.debug.xcconfig"; sourceTree = "<group>"; };
 		9CCE2A2E596EFCA50E7246BB /* Pods-WE-DOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WE-DOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WE-DOTests/Pods-WE-DOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C404D48921C8725500C2FC76 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = "WE-DO/Views/WelcomeVC.swift"; sourceTree = SOURCE_ROOT; };
+		C425D90921BFE79D007BF62E /* WDActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDActivityCell.swift; sourceTree = "<group>"; };
+		C425D90A21BFE79D007BF62E /* WDActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WDActivityCell.xib; sourceTree = "<group>"; };
+		C432E15921CBB27F009C8A2B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C43EED4621BBEAAA00529981 /* AddPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanVC.swift; sourceTree = "<group>"; };
 		C4598DA721B7F72400AB1EAE /* WE-DO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WE-DO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +86,8 @@
 		C4598DBB21B7F72700AB1EAE /* WE-DOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WE-DOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4598DBF21B7F72700AB1EAE /* WE_DOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WE_DOTests.swift; sourceTree = "<group>"; };
 		C4598DC121B7F72700AB1EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C470EF6C21C8FCC5008173C1 /* EmailAuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthVC.swift; sourceTree = "<group>"; };
+		C470EF6E21C962CA008173C1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C479E05621B876D1007D8C10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C493862A21BD75A4003C5B4C /* PlanMapCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMapCVC.swift; sourceTree = "<group>"; };
 		C493862C21BD75DA003C5B4C /* AddActivityCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityCVC.swift; sourceTree = "<group>"; };
@@ -72,7 +98,7 @@
 		C493863421BD7ACF003C5B4C /* UIColorInputError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorInputError.swift; sourceTree = "<group>"; };
 		C493863821BD8586003C5B4C /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C49F762321B9D441007A79B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C49F762721B9D4A2007A79B8 /* Enums+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums+Extensions.swift"; sourceTree = "<group>"; };
+		C49F762721B9D4A2007A79B8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C49F762921B9D827007A79B8 /* ViewClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewClasses.swift; sourceTree = "<group>"; };
 		C49F762B21B9DA77007A79B8 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		C4A19F0721BA8132004ED293 /* WDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDUser.swift; sourceTree = "<group>"; };
@@ -81,8 +107,22 @@
 		C4A19F0D21BA9BDB004ED293 /* WDActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDActivity.swift; sourceTree = "<group>"; };
 		C4A19F0F21BA9F26004ED293 /* WDTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDTags.swift; sourceTree = "<group>"; };
 		C4A19F1121BAA519004ED293 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C4B635F221C6E8FC00BFC71A /* MaterialButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButtons.swift; sourceTree = "<group>"; };
+		C4B635F321C6E8FF00BFC71A /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		C4B635F421C6E90200BFC71A /* ShadowViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowViews.swift; sourceTree = "<group>"; };
+		C4B635F521C6E90600BFC71A /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		C4B635F621C6E90900BFC71A /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		C4B635F721C6E90C00BFC71A /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		C4B635F821C6E90F00BFC71A /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		C4C272C121C0675D00EDED51 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C4D35F8921BC8C32008E27E3 /* MapSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchCell.swift; sourceTree = "<group>"; };
 		C4D35F8A21BC8C32008E27E3 /* MapSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapSearchCell.xib; sourceTree = "<group>"; };
+		C4E7E2AF21C6418900FD68E9 /* PlacesPhotoEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPhotoEngine.swift; sourceTree = "<group>"; };
+		C4E7E2B121C6C26400FD68E9 /* InviteeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteeVC.swift; sourceTree = "<group>"; };
+		C4E7E2B321C6C33900FD68E9 /* InviteeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteeCell.swift; sourceTree = "<group>"; };
+		C4E7E2B421C6C33900FD68E9 /* InviteeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InviteeCell.xib; sourceTree = "<group>"; };
+		C4FD7B1E21C5A7A40098D5A9 /* GSMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSMapVC.swift; sourceTree = "<group>"; };
+		C4FD7B2021C5DEB70098D5A9 /* LoggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
 		D978D2B0AF532385DF8A870B /* Pods_WE_DOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WE_DOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FF1F71B679CC9C9CB4BD26 /* Pods-WE-DOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WE-DOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WE-DOTests/Pods-WE-DOTests.release.xcconfig"; sourceTree = "<group>"; };
 		F32D1A8F3AC87A7B54F815C2 /* Pods-WE-DO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WE-DO.release.xcconfig"; path = "Pods/Target Support Files/Pods-WE-DO/Pods-WE-DO.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +148,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C404D48821C8716400C2FC76 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C49F762B21B9DA77007A79B8 /* AuthVC.swift */,
+				C404D48921C8725500C2FC76 /* WelcomeVC.swift */,
+				C470EF6C21C8FCC5008173C1 /* EmailAuthVC.swift */,
+			);
+			name = Auth;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C4598D9E21B7F72400AB1EAE = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +210,8 @@
 				C43EED4621BBEAAA00529981 /* AddPlanVC.swift */,
 				C493862A21BD75A4003C5B4C /* PlanMapCVC.swift */,
 				C493862C21BD75DA003C5B4C /* AddActivityCVC.swift */,
+				C4FD7B1E21C5A7A40098D5A9 /* GSMapVC.swift */,
+				C4E7E2B121C6C26400FD68E9 /* InviteeVC.swift */,
 			);
 			path = "AddPlan Controllers";
 			sourceTree = "<group>";
@@ -166,9 +219,9 @@
 		C49F761E21B9D3CA007A79B8 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				C404D48821C8716400C2FC76 /* Auth */,
 				C493862921BD7562003C5B4C /* AddPlan Controllers */,
 				C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */,
-				C49F762B21B9DA77007A79B8 /* AuthVC.swift */,
 				C4A19F1121BAA519004ED293 /* HomeVC.swift */,
 			);
 			path = Contoller;
@@ -177,6 +230,13 @@
 		C49F761F21B9D3D7007A79B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4B635F721C6E90C00BFC71A /* CustomImageView.swift */,
+				C4B635F621C6E90900BFC71A /* GradientView.swift */,
+				C4B635F221C6E8FC00BFC71A /* MaterialButtons.swift */,
+				C4B635F521C6E90600BFC71A /* MaterialTextField.swift */,
+				C4B635F321C6E8FF00BFC71A /* MaterialView.swift */,
+				C4B635F821C6E90F00BFC71A /* RoundTextField.swift */,
+				C4B635F421C6E90200BFC71A /* ShadowViews.swift */,
 				C4598DAE21B7F72400AB1EAE /* Main.storyboard */,
 				C49F762921B9D827007A79B8 /* ViewClasses.swift */,
 				C4D35F8921BC8C32008E27E3 /* MapSearchCell.swift */,
@@ -184,6 +244,10 @@
 				C493862E21BD79E5003C5B4C /* PlanTagCells.swift */,
 				C493862F21BD79E5003C5B4C /* PlanTagCells.xib */,
 				C493863821BD8586003C5B4C /* CustomLabel.swift */,
+				C425D90921BFE79D007BF62E /* WDActivityCell.swift */,
+				C425D90A21BFE79D007BF62E /* WDActivityCell.xib */,
+				C4E7E2B321C6C33900FD68E9 /* InviteeCell.swift */,
+				C4E7E2B421C6C33900FD68E9 /* InviteeCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,11 +266,13 @@
 		C49F762121B9D3F7007A79B8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C4C272C121C0675D00EDED51 /* SwiftyJSON.swift */,
 				C493863321BD7ACE003C5B4C /* StringExtension.swift */,
 				C493863221BD7ACE003C5B4C /* UIColorExtension.swift */,
 				C493863421BD7ACF003C5B4C /* UIColorInputError.swift */,
 				C49F762321B9D441007A79B8 /* Constants.swift */,
-				C49F762721B9D4A2007A79B8 /* Enums+Extensions.swift */,
+				C49F762721B9D4A2007A79B8 /* Extensions.swift */,
+				C432E15921CBB27F009C8A2B /* Enums.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -215,6 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				C4A19F0921BA8359004ED293 /* DataService.swift */,
+				C4FD7B2021C5DEB70098D5A9 /* LoggerService.swift */,
+				C4E7E2AF21C6418900FD68E9 /* PlacesPhotoEngine.swift */,
+				C470EF6E21C962CA008173C1 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -251,6 +320,7 @@
 				C4598DA421B7F72400AB1EAE /* Frameworks */,
 				C4598DA521B7F72400AB1EAE /* Resources */,
 				2427302F197CF52576E3EF7A /* [CP] Embed Pods Frameworks */,
+				895CBC628FA558312064623F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,8 +397,10 @@
 				C4598DB221B7F72700AB1EAE /* Assets.xcassets in Resources */,
 				C4598DB021B7F72400AB1EAE /* Main.storyboard in Resources */,
 				C493863121BD79E5003C5B4C /* PlanTagCells.xib in Resources */,
+				C4E7E2B621C6C33900FD68E9 /* InviteeCell.xib in Resources */,
 				C479E05721B876D1007D8C10 /* GoogleService-Info.plist in Resources */,
 				C4D35F8C21BC8C32008E27E3 /* MapSearchCell.xib in Resources */,
+				C425D90C21BFE79D007BF62E /* WDActivityCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +432,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -381,6 +454,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -392,6 +466,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WE-DO/Pods-WE-DO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		895CBC628FA558312064623F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WE-DO/Pods-WE-DO-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WE-DO/Pods-WE-DO-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C258788E4A86456DC94B5CF2 /* [CP] Check Pods Manifest.lock */ = {
@@ -445,26 +543,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B635FA21C6E90F00BFC71A /* MaterialView.swift in Sources */,
 				C493863521BD7AD0003C5B4C /* UIColorExtension.swift in Sources */,
+				C4B635FB21C6E90F00BFC71A /* ShadowViews.swift in Sources */,
 				C49F762C21B9DA77007A79B8 /* AuthVC.swift in Sources */,
 				C4A19F0A21BA8359004ED293 /* DataService.swift in Sources */,
+				C4C272C221C0675E00EDED51 /* SwiftyJSON.swift in Sources */,
 				C49F762A21B9D827007A79B8 /* ViewClasses.swift in Sources */,
+				C4B635FE21C6E90F00BFC71A /* CustomImageView.swift in Sources */,
+				C4B635FF21C6E90F00BFC71A /* RoundTextField.swift in Sources */,
 				C43EED4721BBEAAA00529981 /* AddPlanVC.swift in Sources */,
+				C4B635FC21C6E90F00BFC71A /* MaterialTextField.swift in Sources */,
 				C4A19F1021BA9F26004ED293 /* WDTags.swift in Sources */,
-				C49F762821B9D4A2007A79B8 /* Enums+Extensions.swift in Sources */,
+				C49F762821B9D4A2007A79B8 /* Extensions.swift in Sources */,
+				C4E7E2B521C6C33900FD68E9 /* InviteeCell.swift in Sources */,
 				C493862B21BD75A4003C5B4C /* PlanMapCVC.swift in Sources */,
 				C493863021BD79E5003C5B4C /* PlanTagCells.swift in Sources */,
 				C493862D21BD75DA003C5B4C /* AddActivityCVC.swift in Sources */,
 				C4D35F8B21BC8C32008E27E3 /* MapSearchCell.swift in Sources */,
+				C432E15A21CBB27F009C8A2B /* Enums.swift in Sources */,
 				C493863921BD8586003C5B4C /* CustomLabel.swift in Sources */,
+				C470EF6D21C8FCC5008173C1 /* EmailAuthVC.swift in Sources */,
+				C4FD7B1F21C5A7A40098D5A9 /* GSMapVC.swift in Sources */,
 				C4598DAB21B7F72400AB1EAE /* AppDelegate.swift in Sources */,
+				C4E7E2B221C6C26400FD68E9 /* InviteeVC.swift in Sources */,
+				C425D90B21BFE79D007BF62E /* WDActivityCell.swift in Sources */,
 				C4A19F0C21BA9BCA004ED293 /* WDPlan.swift in Sources */,
+				C4B635FD21C6E90F00BFC71A /* GradientView.swift in Sources */,
+				C4E7E2B021C6418900FD68E9 /* PlacesPhotoEngine.swift in Sources */,
+				C404D48A21C8725500C2FC76 /* WelcomeVC.swift in Sources */,
 				C49F762421B9D441007A79B8 /* Constants.swift in Sources */,
 				C493863621BD7AD0003C5B4C /* StringExtension.swift in Sources */,
+				C470EF6F21C962CA008173C1 /* AuthService.swift in Sources */,
+				C4B635F921C6E90F00BFC71A /* MaterialButtons.swift in Sources */,
 				C4A19F0E21BA9BDB004ED293 /* WDActivity.swift in Sources */,
 				C493863721BD7AD0003C5B4C /* UIColorInputError.swift in Sources */,
 				C4A19F1221BAA519004ED293 /* HomeVC.swift in Sources */,
 				C4A19F0821BA8132004ED293 /* WDUser.swift in Sources */,
+				C4FD7B2121C5DEB70098D5A9 /* LoggerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

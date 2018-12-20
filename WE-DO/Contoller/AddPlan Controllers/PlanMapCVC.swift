@@ -31,10 +31,10 @@ class PlanMapCVC: UIViewController {
     }
     
     @IBAction func cancelMaps(_ sender: Any) {
-        if let parent = parent as? AddActivityCVC{
-            parent.triggerUpdate(mapItem: mapitem)
-        }
-        self.removeFrom()
+//        if let parent = parent as? AddActivityCVC{
+//            parent.triggerUpdate(mapItem: mapitem)
+//        }
+//        self.removeFrom()
         
     }
     

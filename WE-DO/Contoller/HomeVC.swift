@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FacebookLogin
 
 class HomeVC: UIViewController {
 
@@ -17,11 +19,12 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        getFriends()
         
     }
     
     @IBAction func userdetailPressed(_ sender: Any) {
-        
+       LoginManager().logOut()
     }
     @IBAction func addPlanPressed(_ sender: Any) {
         if let vc = storyboard?.instantiateViewController(withIdentifier:String(describing: AddPlanVC.self)) as? AddPlanVC{
@@ -34,6 +37,30 @@ class HomeVC: UIViewController {
         userButt.setElevation(2)
         addButt.setElevation(2)
         
+    }
+    
+    func getFriends(){
+        let graphPath = "/me/taggable_friends"
+        let parameters = ["fields": ""]
+        let handler:FBSDKGraphRequestHandler = { (connection:FBSDKGraphRequestConnection?, result:Any?, error:Error?) in
+            if let error = error  {
+                let nserror = error as NSError
+                print("Facebook error occurred with sig: \(nserror.userInfo[FBSDKErrorDeveloperMessageKey] ?? error.localizedDescription)")
+            }else{
+                print("The reult is: \(result ?? "No res")")
+                let json = JSON(result)
+                let friendJSONArray = json["data"].arrayValue
+                for friendJSON in friendJSONArray {
+                    print(friendJSON["name"].stringValue)
+                    print(friendJSON["id"].intValue)
+                }
+                let nextPageToken = json["paging"]["cursors"]["after"].stringValue
+                let prevPageToken = json["paging"]["cursors"]["before"].stringValue
+            }
+            
+            }
+        let graphReq = FBSDKGraphRequest(graphPath: graphPath, parameters: parameters)
+        graphReq?.start(completionHandler: handler)
     }
 
     /*

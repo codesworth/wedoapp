@@ -10,6 +10,8 @@ import UIKit
 import FirebaseCore
 import FacebookCore
 import FacebookLogin
+import GoogleMaps
+import GooglePlaces
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions:launchOptions)
         FirebaseApp.configure()
+        GMSServices.provideAPIKey(Keys.api_gmaps.rawValue)
+        GMSPlacesClient.provideAPIKey(Keys.api_gmaps.rawValue)
+        rootViewController()
         return true
     }
 
@@ -51,5 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
+    
+    func rootViewController(){
+        if let _ = UserDefaults.standard.string(forKey: USER_UID){
+            if let home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier(UINavigationController.self)) as? UINavigationController{
+               window?.rootViewController = home
+            }
+        }
+    }
 }
 

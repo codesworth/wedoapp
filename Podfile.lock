@@ -98,6 +98,9 @@ PODS:
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.1)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (5.2.2):
+    - Firebase/Storage (~> 5.0)
+    - SDWebImage (~> 4.0)
   - GeoFire (3.0.0):
     - Firebase/Database (~> 5.0)
   - Geofirestore (1.2.0):
@@ -111,6 +114,13 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
   - GoogleUtilities/AppDelegateSwizzler (5.3.6):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -166,6 +176,9 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
   - Crashlytics
@@ -176,7 +189,11 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
   - Firebase/Storage
+  - FirebaseUI/Storage (~> 5.0)
   - Geofirestore
+  - GoogleMaps
+  - GooglePlaces
+  - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -198,9 +215,12 @@ SPEC REPOS:
     - FirebaseInstanceID
     - FirebaseMessaging
     - FirebaseStorage
+    - FirebaseUI
     - GeoFire
     - Geofirestore
     - GoogleAppMeasurement
+    - GoogleMaps
+    - GooglePlaces
     - GoogleUtilities
     - gRPC
     - "gRPC-C++"
@@ -211,6 +231,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SDWebImage
 
 EXTERNAL SOURCES:
   FacebookCore:
@@ -242,9 +263,12 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
   FirebaseMessaging: 0f14a264b0d7f867e8eff5d3556bc5d0d4e57888
   FirebaseStorage: 3d22c041370593e639fba013d1eb698a8dae2881
+  FirebaseUI: 09519bf436a055cd696bf68687d624423150e4c0
   GeoFire: e3ae6f4be3f2466c3467ef6c1c203db3af935c59
   Geofirestore: ad548ea5e3c1ae595c746c7b796df5534d8202f3
   GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   gRPC: 9d4c549f37c7cef22478634bac7a0405b6e3dbfb
   "gRPC-C++": ee0b01db3122f0b6c2be28b5b11039f62fa15fe6
@@ -255,7 +279,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 7a399f8d4617ffb78f609c07a33f818637619c09
+PODFILE CHECKSUM: 0ffce5269a2d9dafb2986dd1e13713aec05fadfe
 
 COCOAPODS: 1.5.3
