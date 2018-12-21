@@ -18,6 +18,7 @@ enum InviteStatus:Int{
     case invited = 1
     case accepted = 2
     case declined = 3
+    case uninvited = 0
 }
 
 

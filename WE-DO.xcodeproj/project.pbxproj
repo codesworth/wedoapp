@@ -30,6 +30,8 @@
 		C493863621BD7AD0003C5B4C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493863321BD7ACE003C5B4C /* StringExtension.swift */; };
 		C493863721BD7AD0003C5B4C /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493863421BD7ACF003C5B4C /* UIColorInputError.swift */; };
 		C493863921BD8586003C5B4C /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493863821BD8586003C5B4C /* CustomLabel.swift */; };
+		C49D63DD21CC48A20098F4D6 /* SupplemtaryCellTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D63DB21CC48A20098F4D6 /* SupplemtaryCellTab.swift */; };
+		C49D63DE21CC48A20098F4D6 /* SupplemtaryCellTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49D63DC21CC48A20098F4D6 /* SupplemtaryCellTab.xib */; };
 		C49F762421B9D441007A79B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762321B9D441007A79B8 /* Constants.swift */; };
 		C49F762821B9D4A2007A79B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762721B9D4A2007A79B8 /* Extensions.swift */; };
 		C49F762A21B9D827007A79B8 /* ViewClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F762921B9D827007A79B8 /* ViewClasses.swift */; };
@@ -97,6 +99,8 @@
 		C493863321BD7ACE003C5B4C /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C493863421BD7ACF003C5B4C /* UIColorInputError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorInputError.swift; sourceTree = "<group>"; };
 		C493863821BD8586003C5B4C /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		C49D63DB21CC48A20098F4D6 /* SupplemtaryCellTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplemtaryCellTab.swift; sourceTree = "<group>"; };
+		C49D63DC21CC48A20098F4D6 /* SupplemtaryCellTab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplemtaryCellTab.xib; sourceTree = "<group>"; };
 		C49F762321B9D441007A79B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C49F762721B9D4A2007A79B8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C49F762921B9D827007A79B8 /* ViewClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewClasses.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				C425D90A21BFE79D007BF62E /* WDActivityCell.xib */,
 				C4E7E2B321C6C33900FD68E9 /* InviteeCell.swift */,
 				C4E7E2B421C6C33900FD68E9 /* InviteeCell.xib */,
+				C49D63DB21CC48A20098F4D6 /* SupplemtaryCellTab.swift */,
+				C49D63DC21CC48A20098F4D6 /* SupplemtaryCellTab.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				C493863121BD79E5003C5B4C /* PlanTagCells.xib in Resources */,
 				C4E7E2B621C6C33900FD68E9 /* InviteeCell.xib in Resources */,
 				C479E05721B876D1007D8C10 /* GoogleService-Info.plist in Resources */,
+				C49D63DE21CC48A20098F4D6 /* SupplemtaryCellTab.xib in Resources */,
 				C4D35F8C21BC8C32008E27E3 /* MapSearchCell.xib in Resources */,
 				C425D90C21BFE79D007BF62E /* WDActivityCell.xib in Resources */,
 			);
@@ -545,6 +552,7 @@
 			files = (
 				C4B635FA21C6E90F00BFC71A /* MaterialView.swift in Sources */,
 				C493863521BD7AD0003C5B4C /* UIColorExtension.swift in Sources */,
+				C49D63DD21CC48A20098F4D6 /* SupplemtaryCellTab.swift in Sources */,
 				C4B635FB21C6E90F00BFC71A /* ShadowViews.swift in Sources */,
 				C49F762C21B9DA77007A79B8 /* AuthVC.swift in Sources */,
 				C4A19F0A21BA8359004ED293 /* DataService.swift in Sources */,

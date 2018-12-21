@@ -16,6 +16,7 @@ class AddPlanVC: UIViewController {
     @IBOutlet weak var sendInviteButt: WDTagButton!
     @IBOutlet weak var mapVContainer: UIView!
     //@IBOutlet weak var addActivityVCC: UIView!
+    var invitedList:Aliases.wdInvite!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var inviteLabl: UILabel!
     private var overlay:UIView!
@@ -26,6 +27,7 @@ class AddPlanVC: UIViewController {
     @IBOutlet weak var addActivityButt: WDTagButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        invitedList = [:]
         setup()
         titleLabel.delegate = self
         // Do any additional setup after loading the view.
@@ -39,6 +41,8 @@ class AddPlanVC: UIViewController {
     
     @IBAction func inviteFriendsPressed(_ sender: Any) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: identifier(InviteeVC.self)) as? InviteeVC{
+            vc.delegate = self
+            vc.invitedFriends = invitedList
             present(vc, with: nil)
         }
     }
@@ -199,5 +203,12 @@ extension AddPlanVC:UITableViewDelegate,UITableViewDataSource{
     
     
     
+}
+
+extension AddPlanVC:InvitedListDelegate{
+    
+    func didPassInvitedList(_ list: Aliases.wdInvite) {
+        invitedList = list
+    }
 }
 
