@@ -31,6 +31,7 @@ enum CompletionHandlers{
     typealias alert = (_ alert:UIAlertAction) -> ()
     typealias dataservice = (_ success: Bool?, _ errorMessage: String?) -> ()
     typealias authBlock = (_ sucess:Bool, _ errMessage:String?) -> Void
+    typealias simpleExecution = () -> ()
     
 }
 
@@ -52,9 +53,11 @@ enum DateFormats:String{
 
 enum References:String{
     case users = "WD-USERS"
-    
+    case plans = "WD-PLANS"
     case locations = "WD-Locations"
     case photos = "photos"
+    case invites = "Invites"
+    case activities = "Activities"
 }
 
 enum Fields:String{
@@ -64,6 +67,25 @@ enum Fields:String{
     case timestamp = "timestamp"
     case profileUrl = "profileUrl"
     case phone = "phone"
+    case name = "name"
+    case date = "date"
+    case activities = "activities"
+    
+    case placeID = "placeID"
+    case placeName = "placeName"
+    case latitude = "latitude"
+    case longitude = "longitude"
+    case locationUrl = "locationUrl"
+    case locationPhone = "locationPhone"
+    case attributes = "attributes"
+    case creator = "creator"
+    case status = "status"
+    case title = "title"
+    case time = "time"
+    case location = "location"
+    case tags = "tags"
+    case invites = "invites"
+    
 }
 
 enum AssetsImages:String{

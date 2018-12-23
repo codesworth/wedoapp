@@ -22,6 +22,8 @@ class InviteeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchField.delegate = self
+        searchField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         logic = UserLogic()
         registerCells()
         logic.getUsersFromList(inviteeList:invitedFriends) { (suc, err) in
@@ -119,4 +121,43 @@ extension InviteeVC:Invited{
             self.invitedFriends.removeValue(forKey: uid)
         }
     }
+}
+
+
+extension InviteeVC:UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let text = searchField.text ?? ""
+        if text == ""{
+            logic.isSearching = false
+            tableView.reloadData()
+        }else{
+            logic.isSearching = true
+            logic.searchBegun(text) {
+                self.tableView.reloadData()
+            }
+        }
+        
+        view.endEditing(true)
+        return true
+    }
+    
+    @objc func textDidChange(){
+        let text = searchField.text ?? ""
+        if text == ""{
+            logic.isSearching = false
+            tableView.reloadData()
+        }else{
+            logic.isSearching = true
+            logic.searchBegun(text) {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
 }

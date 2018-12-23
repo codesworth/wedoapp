@@ -12,6 +12,7 @@ class WDActivity{
     
     public private (set) var title:String
     public private (set) var time:Date
+    
     public private (set) var location:WDEventLocation
     public private (set) var tags:Aliases.sset
     
@@ -21,6 +22,15 @@ class WDActivity{
         tags = set
         time = date
         self.location = location
+    }
+    
+    func databaseExport()->Aliases.dictionary{
+        return [
+            Fields.title.rawValue:title,
+            Fields.time.rawValue:time,
+            Fields.tags.rawValue:Array(tags),
+            Fields.location.rawValue:location.dataExport()
+        ]
     }
 }
 
@@ -43,5 +53,16 @@ struct WDEventLocation {
         locationUrl = url
         locationPhone = phone
         self.attributes = attributes
+    }
+    func dataExport() -> Aliases.dictionary {
+        return [
+            Fields.placeID.rawValue:placeID,
+            Fields.placeName.rawValue:placeName,
+            Fields.longitude.rawValue:long,
+            Fields.latitude.rawValue:lat,
+            Fields.locationUrl.rawValue:locationUrl?.absoluteString ?? "",
+            Fields.locationPhone.rawValue:locationPhone ?? "",
+            Fields.attributes.rawValue:attributes?.string ?? ""
+        ]
     }
 }

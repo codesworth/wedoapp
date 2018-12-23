@@ -50,19 +50,28 @@ class UserLogic{
     
     
     public private (set) var invitees:[WDInvite]
-    
+    private var searchedResults:[WDInvite]
+    public var isSearching = false
     private var userRef:CollectionReference{
         return firestore().collection(References.users)
     }
     
-    func count()->Int{return invitees.count}
+    func count()->Int{
+        if isSearching{
+            return searchedResults.count
+        }
+       return invitees.count
+    }
     func at(_ index:Int)->WDInvite{
+        if isSearching{
+            return searchedResults[index]
+        }
         return invitees[index]
     }
     
     init() {
         invitees = []
-        
+        searchedResults = []
     }
     
     func getUsersFromList(inviteeList:Aliases.wdInvite, handler:@escaping CompletionHandlers.dataservice){
@@ -86,6 +95,16 @@ class UserLogic{
             }
         }
         
+    }
+    
+    func searchBegun(_ text:String, callback:CompletionHandlers.simpleExecution){
+        
+        searchedResults = invitees.compactMap { invite  -> WDInvite? in
+            if invite.user.username.lowercased().contains(text.lowercased()){
+                return invite
+            }else{return nil}
+        }
+        callback()
     }
     
     func getMyFriends(handler:@escaping CompletionHandlers.dataservice){

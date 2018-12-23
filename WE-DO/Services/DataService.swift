@@ -50,7 +50,11 @@ final class DataService{
 }
 
 
-
+extension DocumentReference{
+    func collection(_ ref:References)->CollectionReference{
+        return collection(ref.rawValue)
+    }
+}
 
 extension DocumentSnapshot{
     
@@ -99,6 +103,8 @@ extension Firestore{
         return collection(ref.rawValue)
     }
 }
+
+
 
 func storage()->Storage{
     return Storage.storage()

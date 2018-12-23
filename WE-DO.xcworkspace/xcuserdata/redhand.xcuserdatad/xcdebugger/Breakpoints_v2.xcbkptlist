@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043370.209663"
+            timestampString = "567211481.9110481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043370.2102031"
+            timestampString = "567211481.9112591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043370.210548"
+            timestampString = "567211481.911404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
             <Locations>
@@ -426,7 +426,7 @@
                   moduleName = "WE-DO"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/redhand/Development/Projects/WE-DO/WE-DO/Models+ModelLogic/WDUser.swift"
-                  timestampString = "567043372.181384"
+                  timestampString = "567130103.236632"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"
@@ -441,7 +441,7 @@
                   moduleName = "WE-DO"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/redhand/Development/Projects/WE-DO/WE-DO/Models+ModelLogic/WDUser.swift"
-                  timestampString = "567043372.184404"
+                  timestampString = "567130103.2399369"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -458,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043370.21088"
+            timestampString = "567211481.911521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043370.211218"
+            timestampString = "567211481.911643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Contoller/AddPlan Controllers/InviteeVC.swift"
-            timestampString = "567043370.2122279"
+            timestampString = "567264313.5155391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "backButtPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Contoller/AddPlan Controllers/InviteeVC.swift"
-            timestampString = "567043370.2123049"
+            timestampString = "567264313.515622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "backButtPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Contoller/AddPlan Controllers/AddPlanVC.swift"
-            timestampString = "567043370.212383"
+            timestampString = "567264313.515695"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "didPassInvitedList(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Contoller/AddPlan Controllers/AddPlanVC.swift"
-            timestampString = "567043370.212453"
+            timestampString = "567264313.516518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "didPassInvitedList(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,23 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Contoller/AddPlan Controllers/InviteeVC.swift"
-            timestampString = "567043370.212523"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "didFinishInviting(_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WE-DO/Contoller/AddPlan Controllers/InviteeVC.swift"
-            timestampString = "567043370.212585"
+            timestampString = "567264313.517329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -585,12 +569,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043480.7392401"
+            filePath = "WE-DO/Contoller/AddPlan Controllers/InviteeVC.swift"
+            timestampString = "567264313.517401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "didFinishInviting(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
+            timestampString = "567211481.916913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WE-DO/Models+ModelLogic/WDUser.swift"
-            timestampString = "567043483.835692"
+            timestampString = "567211481.917046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "getUsersFromList(inviteeList:handler:)"
             landmarkType = "7">
          </BreakpointContent>

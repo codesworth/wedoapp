@@ -47,6 +47,7 @@ class AddPlanVC: UIViewController {
         }
     }
     @IBAction func cancelPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -92,12 +93,17 @@ class AddPlanVC: UIViewController {
         sendInviteButt.changeBorderColor(UIColor.primaryLight)
         addActivityButt.changeBorderColor(UIColor.wd_yellow)
         mapVContainer.isHidden = true
-        
+        updateInviteslabels()
         
     }
     
     @IBAction func sendInvitesPressed(_ sender: Any) {
-
+        let title = titleLabel.text ?? ""
+        if activities.count > 0 && title.count > 0 && invitedList.count > 0{
+            createPlan()
+        }else{
+            present(createDefaultAlert("Info!!", "Please make sure your plan has a title and atleasr one activity and an invite",.alert, "OK",.default, nil), animated: true, completion: nil)
+        }
     }
     
     func getPhotoFor(place:WDEventLocation, atIndexPath:IndexPath){
@@ -126,6 +132,34 @@ class AddPlanVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func createPlan(){
+        var acs = activities.compactMap { (ac,bo) -> WDActivity? in
+            return ac
+        }
+        acs.sort { (ac1, ac2) -> Bool in
+            return ac1.time < ac2.time
+        }
+        let uid = UserDefaults.standard.string(forKey: USER_UID) ?? ""
+        let plan = WDPlan(creator:uid, name: titleLabel.text!, start: activities.first!.0.time, activities: acs, invites: invitedList)
+        let planLogic = PlanLogic(plan: plan)
+        planLogic.uploadPlan { (sucess, err) in
+            if sucess!{
+                self.present(createDefaultAlert("Success", "Plan was succesfully created 💥🎉🎊",.alert, "Dismiss",.default, nil), animated: true, completion: {
+                    self.dismiss(animated: true, completion: nil)
+                })
+            }
+        }
+        
+    }
+    
+    func updateInviteslabels(){
+        if invitedList.count == 1 {
+            inviteLabl.text = "\(invitedList.count) Invite"
+        }else{
+            inviteLabl.text = "\(invitedList.count) Invites"
+        }
+    }
     
     
 }
@@ -209,6 +243,7 @@ extension AddPlanVC:InvitedListDelegate{
     
     func didPassInvitedList(_ list: Aliases.wdInvite) {
         invitedList = list
+        updateInviteslabels()
     }
 }
 

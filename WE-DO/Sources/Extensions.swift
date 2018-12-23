@@ -141,6 +141,10 @@ extension Date{
         dateFomater.dateFormat = format.rawValue
         return dateFomater.string(from: self)
     }
+    
+    public var unix_ts:Int{
+        return Int(timeIntervalSince1970)
+    }
 }
 
 
