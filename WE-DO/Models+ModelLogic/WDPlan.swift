@@ -7,22 +7,62 @@
 //
 
 import Firebase
+import Geofirestore
+import IGListKit
 
-final class WDPlan{
+public class WDPlan:ListDiffable,Equatable{
     
+    public func diffIdentifier() -> NSObjectProtocol {
+        return id as NSObjectProtocol
+    }
+    
+    public static func ==(lhs: WDPlan, rhs: WDPlan) -> Bool {
+        return lhs.id == rhs.id && lhs.startDate == rhs.startDate
+    }
+    
+    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard self !== object else { return true }
+        guard let object = object as? WDPlan else { return false }
+        return id == object.id
+    }
+    
+
+    
+    public private (set) var id:String
     public private (set) var creator:String
     public private (set) var planName:String
     public private (set) var startDate:Date
+    public private (set) var endDate:Date
     public private (set) var dateCreated:Date?
     public private (set) var activities:[WDActivity]
     public private (set) var invites:Aliases.wdInvite
     
-    init(creator: String, name:String, start:Date, activities:[WDActivity],invites:Aliases.wdInvite) {
+    init(creator: String, name:String, start:Date,end:Date ,activities:[WDActivity],invites:Aliases.wdInvite) {
+        id = firestore().collection(.users).document().documentID
+        var invites = invites
+        invites.updateValue(.accepted, forKey: creator)
         planName = name
         startDate = start
         self.activities = activities
         self.invites = invites
         self.creator = creator
+        self.endDate = end
+    }
+    
+    init(_ snapshot:DocumentSnapshot, _ activities:[WDActivity]?){
+        id = snapshot.documentID
+        creator = snapshot.getString(.creator)
+        planName = snapshot.getString(.name)
+        startDate = snapshot.getDate(.date)
+        endDate = snapshot.getDate(.ending)
+        dateCreated = snapshot.getDate(.dateCreated)
+        let iv = snapshot.get(Fields.invites.rawValue) as! [String:Int]
+        invites = [:]
+        for i in iv{
+            invites.updateValue(InviteStatus(rawValue: i.value)!, forKey: i.key)
+        }
+        
+        self.activities = activities ?? []
     }
     
     func transform()->[String:Int]{
@@ -40,6 +80,7 @@ final class WDPlan{
             Fields.creator.rawValue:creator,
             Fields.name.rawValue:planName,
             Fields.date.rawValue:startDate,
+            Fields.ending.rawValue:endDate,
             Fields.dateCreated.rawValue:datecreated,
             Fields.invites.rawValue:transform()
         ]
@@ -47,43 +88,4 @@ final class WDPlan{
 }
 
 
-
-public class PlanLogic{
-    
-    private var plan:WDPlan
-    
-    private var reference:CollectionReference{
-        return firestore().collection(.plans)
-    }
-    
-    private var userRef:CollectionReference{
-        return firestore().collection(.users)
-    }
-    
-    init(plan:WDPlan) {
-        self.plan = plan
-        
-    }
-    
-    func uploadPlan(handler:@escaping CompletionHandlers.dataservice){
-        let batch = firestore().batch()
-        let pref = reference.document()
-        batch.setData(plan.dataExport(), forDocument: pref, merge: true)
-        for activity in plan.activities{
-            let ref = pref.collection(References.activities.rawValue).document(String(activity.time.unix_ts))
-            batch.setData(activity.databaseExport(), forDocument: ref, merge: true)
-        }
-        for invite in plan.invites{
-           let uref = userRef.document(invite.key).collection(.invites).document(pref.documentID)
-            batch.setData([Fields.status.rawValue:invite.value.rawValue,Fields.dateCreated.rawValue:plan.dateCreated ?? Date(), Fields.creator.rawValue:plan.creator], forDocument: uref, merge: true)
-        }
-        batch.commit { (err) in
-            if let err = err{
-                handler(false,err.localizedDescription)
-            }else{
-                handler(true,nil)
-            }
-        }
-    }
-}
 

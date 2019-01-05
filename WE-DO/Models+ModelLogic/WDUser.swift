@@ -24,10 +24,10 @@ class WDUser{
     
     init(snapshot:DocumentSnapshot) {
         uid = snapshot.documentID
-        username = snapshot.getString(id: Fields.username.rawValue)
-        profileUrl = snapshot.getString(id: Fields.profileUrl.rawValue)
-        date_created = snapshot.get(Fields.dateCreated.rawValue) as? Date ?? Date()
-        phone = snapshot.getString(id: Fields.phone.rawValue)
+        username = snapshot.getString(.username)
+        profileUrl = snapshot.getString(.profileUrl)
+        date_created = snapshot.getDate(.dateCreated)
+        phone = snapshot.getString(.phone)
     }
     
     
@@ -112,9 +112,12 @@ class UserLogic{
         userRef.getDocuments { (query, err) in
             if let query = query{
                 for doc in query.documents{
-                    let user = WDUser(snapshot: doc)
-                    let invite = WDInvite(user: user, status: .uninvited)
-                    self.invitees.append(invite)
+                    let uid = UserDefaults.standard.string(forKey: USER_UID)!
+                    if doc.documentID != uid {
+                        let user = WDUser(snapshot: doc)
+                        let invite = WDInvite(user: user, status: .uninvited)
+                        self.invitees.append(invite)
+                    }
                 }
                 handler(true,nil)
             }else{

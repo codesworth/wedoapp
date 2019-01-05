@@ -14,11 +14,16 @@ enum Segue:String{
     case toEmailAuth = "toEmailAuth"
 }
 
-enum InviteStatus:Int{
+public enum InviteStatus:Int{
     case invited = 1
     case accepted = 2
     case declined = 3
     case uninvited = 0
+}
+
+enum Types{
+    case key
+    case value
 }
 
 
@@ -33,12 +38,21 @@ enum CompletionHandlers{
     typealias authBlock = (_ sucess:Bool, _ errMessage:String?) -> Void
     typealias simpleExecution = () -> ()
     
+    
 }
 
-enum Aliases{
-    typealias dictionary = Dictionary<String,Any>
-    typealias sset = Set<String>
-    typealias wdInvite = Dictionary<String,InviteStatus>
+public enum SectionType:Int{
+    case active = 1
+    case invites = 2
+    case future = 3
+    case dead = 100
+}
+
+public enum Aliases{
+    public typealias dictionary = Dictionary<String,Any>
+    public typealias sset = Set<String>
+    public typealias wdInvite = Dictionary<String,InviteStatus>
+    public typealias stray = Array<String>
 }
 
 enum DateFormats:String{
@@ -47,6 +61,7 @@ enum DateFormats:String{
     case year_month = "MMMM yyyy"
     case long_epoch = "E, d MMM yyyy HH:mm:ss Z"
     case no_year_t = "MMM d, h:mm a"
+    case no_year_nt = "MMM d"
 }
 
 
@@ -61,7 +76,7 @@ enum References:String{
 }
 
 enum Fields:String{
-    
+    case uid = "uid"
     case username = "username"
     case dateCreated = "dateCreated"
     case timestamp = "timestamp"
@@ -85,6 +100,8 @@ enum Fields:String{
     case location = "location"
     case tags = "tags"
     case invites = "invites"
+    case ending = "endDate"
+    case ts_ending = "u_ts"
     
 }
 

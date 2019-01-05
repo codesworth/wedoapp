@@ -58,41 +58,67 @@ extension DocumentReference{
 
 extension DocumentSnapshot{
     
-    func getString(id:String)->String{
-        if let field = get(id) as? String{
+    func getString(_ id:Fields)->String{
+        if let field = get(id.rawValue) as? String{
             return field
         }
         return ""
     }
     
-    func getDouble(id:String)->Double{
-        if let field = get(id) as? Double{
+    func getDate(_ id:Fields)->Date{
+        Logger.log(self.get(id.rawValue).debugDescription)
+        if let field = get(id.rawValue) as? Timestamp{
+            return field.dateValue()
+        }
+        return Date.init(timeIntervalSince1970: 0)
+        
+        
+    }
+    
+    func getArray(_ id:Fields)->[Any]{
+        if let field = get(id.rawValue) as? [Any]{
+            return field
+        }
+        return []
+    }
+    
+    func getDictionary(_ id:Fields)->Aliases.dictionary{
+        if let field = get(id.rawValue) as? Aliases.dictionary{
+            return field
+        }
+        return [:]
+
+    }
+    
+    func getDouble(id:Fields)->Double{
+        if let field = get(id.rawValue) as? Double{
             return field
         }
         return 0.000001
     }
     
-    func getInt(id:String)->Int{
-        if let field = get(id) as? Int{
+    func getInt(_ id:Fields)->Int{
+        if let field = get(id.rawValue) as? Int{
             return field
         }
         return 0
     }
     
-    func getInt64(id:String)->Int64{
-        if let field = get(id) as? Int64{
+    func getInt64(_ id:Fields)->Int64{
+        if let field = get(id.rawValue) as? Int64{
             return field
         }
         return 0
     }
     
     
-    func getBoolena(id:String)->Bool{
-        if let field = get(id) as? Bool{
+    func getBoolena(_ id:Fields)->Bool{
+        if let field = get(id.rawValue) as? Bool{
             return field
         }
         return false
     }
+    
     
 }
 
@@ -132,3 +158,5 @@ extension UIImageView{
         }
     }
 }
+
+

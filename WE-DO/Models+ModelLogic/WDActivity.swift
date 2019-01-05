@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
-class WDActivity{
+public class WDActivity{
     
     public private (set) var title:String
     public private (set) var time:Date
@@ -32,10 +33,17 @@ class WDActivity{
             Fields.location.rawValue:location.dataExport()
         ]
     }
+    
+    init(_ snapshot:DocumentSnapshot){
+        title = snapshot.getString(.title)
+        tags = Set(snapshot.getArray(.tags) as! Aliases.stray)
+        time = snapshot.getDate(.time)
+        location = WDEventLocation(snapshot.getDictionary(.location))
+    }
 }
 
 
-struct WDEventLocation {
+public struct WDEventLocation {
     
     var placeID:String
     var placeName:String
@@ -64,5 +72,16 @@ struct WDEventLocation {
             Fields.locationPhone.rawValue:locationPhone ?? "",
             Fields.attributes.rawValue:attributes?.string ?? ""
         ]
+    }
+    
+    init(_ data:Aliases.dictionary) {
+        placeID = data.getString(.placeID)
+        placeName = data.getString(.placeName)
+        lat = data.getDouble(id: .latitude)
+        long = data.getDouble(id: .longitude)
+        locationUrl = URL(string:data.getString(.locationUrl))
+        locationPhone = data.getString(.phone)
+        attributes = NSAttributedString(string: data.getString(.attributes))
+        
     }
 }

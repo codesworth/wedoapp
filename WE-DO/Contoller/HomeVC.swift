@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FacebookLogin
+import IGListKit
 
 class HomeVC: UIViewController {
 
@@ -16,11 +17,25 @@ class HomeVC: UIViewController {
     @IBOutlet weak var userButt: AttributedButton!
     @IBOutlet weak var addButt: AttributedButton!
     @IBOutlet weak var collectionview: UICollectionView!
+    var data:[WDPlanLists] = []
+    var logic = PlanLogic()
+    lazy var adapter: ListAdapter = {
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 2)
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "WE-DO"
+        data = logic.planlist
         setupViews()
-        getFriends()
-        
+        adapter.collectionViewDelegate = self
+        adapter.collectionView = collectionview
+        adapter.dataSource = self
+        logic.getAvailablePlans { (sucess, err) in
+            if sucess!{
+                self.data = self.logic.planlist
+                self.adapter.reloadData(completion: nil)
+            }
+        }
     }
     
     @IBAction func userdetailPressed(_ sender: Any) {
@@ -39,29 +54,6 @@ class HomeVC: UIViewController {
         
     }
     
-    func getFriends(){
-        let graphPath = "/me/taggable_friends"
-        let parameters = ["fields": ""]
-        let handler:FBSDKGraphRequestHandler = { (connection:FBSDKGraphRequestConnection?, result:Any?, error:Error?) in
-            if let error = error  {
-                let nserror = error as NSError
-                print("Facebook error occurred with sig: \(nserror.userInfo[FBSDKErrorDeveloperMessageKey] ?? error.localizedDescription)")
-            }else{
-                print("The reult is: \(result ?? "No res")")
-                let json = JSON(result)
-                let friendJSONArray = json["data"].arrayValue
-                for friendJSON in friendJSONArray {
-                    print(friendJSON["name"].stringValue)
-                    print(friendJSON["id"].intValue)
-                }
-                let nextPageToken = json["paging"]["cursors"]["after"].stringValue
-                let prevPageToken = json["paging"]["cursors"]["before"].stringValue
-            }
-            
-            }
-        let graphReq = FBSDKGraphRequest(graphPath: graphPath, parameters: parameters)
-        graphReq?.start(completionHandler: handler)
-    }
 
     /*
     // MARK: - Navigation
@@ -73,4 +65,31 @@ class HomeVC: UIViewController {
     }
     */
 
+}
+
+
+
+
+
+
+extension HomeVC:UICollectionViewDelegate,ListAdapterDataSource{
+    
+
+    func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return data as [ListDiffable]
+    }
+    
+    func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return PlanSection()
+    }
+    
+    func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return nil
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }

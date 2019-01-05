@@ -12,6 +12,7 @@ class AddPlanVC: UIViewController {
 
     @IBOutlet weak var cancelButt: WDTagButton!
 
+    @IBOutlet weak var endDateTxt: BaseTextField!
     @IBOutlet weak var titleLabel: BaseTextField!
     @IBOutlet weak var sendInviteButt: WDTagButton!
     @IBOutlet weak var mapVContainer: UIView!
@@ -25,10 +26,21 @@ class AddPlanVC: UIViewController {
     @IBOutlet weak var inviteimg: UIImageView!
     private var placePhotos:[String:UIImage] = [:]
     @IBOutlet weak var addActivityButt: WDTagButton!
+    var endDate:Date?
+    private lazy var datepicker: UIDatePicker = {
+        let dat = UIDatePicker(frame: CGRect(x: 0, y: view.frame.height - 200, width: view.frame.width, height: 200))
+        dat.datePickerMode = .dateAndTime
+        
+        dat.minimumDate = Date()
+        dat.setDate(Date(), animated: true)
+        return dat
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         invitedList = [:]
         setup()
+        endDateTxt.inputView = datepicker
+        setPicker()
         titleLabel.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -99,7 +111,7 @@ class AddPlanVC: UIViewController {
     
     @IBAction func sendInvitesPressed(_ sender: Any) {
         let title = titleLabel.text ?? ""
-        if activities.count > 0 && title.count > 0 && invitedList.count > 0{
+        if activities.count > 0 && title.count > 0 && invitedList.count > 0 && endDate != nil{
             createPlan()
         }else{
             present(createDefaultAlert("Info!!", "Please make sure your plan has a title and atleasr one activity and an invite",.alert, "OK",.default, nil), animated: true, completion: nil)
@@ -141,13 +153,13 @@ class AddPlanVC: UIViewController {
             return ac1.time < ac2.time
         }
         let uid = UserDefaults.standard.string(forKey: USER_UID) ?? ""
-        let plan = WDPlan(creator:uid, name: titleLabel.text!, start: activities.first!.0.time, activities: acs, invites: invitedList)
-        let planLogic = PlanLogic(plan: plan)
-        planLogic.uploadPlan { (sucess, err) in
+        let plan = WDPlan(creator:uid, name: titleLabel.text!, start: activities.first!.0.time, end:endDate!, activities: acs, invites: invitedList)
+        let planLogic = PlanLogic()
+        planLogic.uploadPlan (plan:plan){ (sucess, err) in
             if sucess!{
-                self.present(createDefaultAlert("Success", "Plan was succesfully created 💥🎉🎊",.alert, "Dismiss",.default, nil), animated: true, completion: {
+                self.present(createDefaultAlert("Success", "Plan was succesfully created 💥🎉🎊",.alert, "Dismiss",.default,{ (alert) in
                     self.dismiss(animated: true, completion: nil)
-                })
+                }), animated: true, completion: nil)
             }
         }
         
@@ -161,6 +173,23 @@ class AddPlanVC: UIViewController {
         }
     }
     
+    
+    @objc func datePickerEnded(){
+        endDate  =  datepicker.date
+        endDateTxt.text = endDate!.toStringwith(.short_t)
+    }
+    
+    func setPicker(){
+        datepicker.addTarget(self, action: #selector(datePickerEnded), for: .valueChanged)
+        let toolbar = UIToolbar().ToolbarPiker(mySelect: #selector(self.dismissdp))
+        
+        //        toolbar.items = [(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissdp)))]
+        endDateTxt.inputAccessoryView = toolbar
+    }
+    
+    @objc func dismissdp(){
+        view.endEditing(true)
+    }
     
 }
 

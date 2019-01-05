@@ -12,6 +12,12 @@
 		C404D48A21C8725500C2FC76 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404D48921C8725500C2FC76 /* WelcomeVC.swift */; };
 		C425D90B21BFE79D007BF62E /* WDActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425D90921BFE79D007BF62E /* WDActivityCell.swift */; };
 		C425D90C21BFE79D007BF62E /* WDActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C425D90A21BFE79D007BF62E /* WDActivityCell.xib */; };
+		C429855021D03BEE00BF8F7F /* GenericPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429854E21D03BEE00BF8F7F /* GenericPlanCell.swift */; };
+		C429855121D03BEE00BF8F7F /* GenericPlanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C429854F21D03BEE00BF8F7F /* GenericPlanCell.xib */; };
+		C429855421D0546200BF8F7F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429855221D0546200BF8F7F /* AvatarCell.swift */; };
+		C429855521D0546200BF8F7F /* AvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C429855321D0546200BF8F7F /* AvatarCell.xib */; };
+		C429855721D0F5BB00BF8F7F /* PlanSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429855621D0F5BB00BF8F7F /* PlanSection.swift */; };
+		C429855921D15D2A00BF8F7F /* PlanLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429855821D15D2A00BF8F7F /* PlanLogic.swift */; };
 		C432E15A21CBB27F009C8A2B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432E15921CBB27F009C8A2B /* Enums.swift */; };
 		C43EED4721BBEAAA00529981 /* AddPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43EED4621BBEAAA00529981 /* AddPlanVC.swift */; };
 		C4598DAB21B7F72400AB1EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */; };
@@ -52,6 +58,11 @@
 		C4C272C221C0675E00EDED51 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C272C121C0675D00EDED51 /* SwiftyJSON.swift */; };
 		C4D35F8B21BC8C32008E27E3 /* MapSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D35F8921BC8C32008E27E3 /* MapSearchCell.swift */; };
 		C4D35F8C21BC8C32008E27E3 /* MapSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D35F8A21BC8C32008E27E3 /* MapSearchCell.xib */; };
+		C4D8E9E121D349F3005C7B06 /* OverlappingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8E9E021D349F3005C7B06 /* OverlappingFlowLayout.swift */; };
+		C4D8E9E521D3834D005C7B06 /* WDListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8E9E421D3834D005C7B06 /* WDListFooterView.xib */; };
+		C4D8E9EA21D38E8A005C7B06 /* WDListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8E9E821D38E8A005C7B06 /* WDListHeaderView.swift */; };
+		C4D8E9EB21D38E8A005C7B06 /* WDListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8E9E921D38E8A005C7B06 /* WDListHeaderView.xib */; };
+		C4D8E9EE21D3921F005C7B06 /* WDPlanLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8E9ED21D3921F005C7B06 /* WDPlanLists.swift */; };
 		C4E7E2B021C6418900FD68E9 /* PlacesPhotoEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7E2AF21C6418900FD68E9 /* PlacesPhotoEngine.swift */; };
 		C4E7E2B221C6C26400FD68E9 /* InviteeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7E2B121C6C26400FD68E9 /* InviteeVC.swift */; };
 		C4E7E2B521C6C33900FD68E9 /* InviteeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7E2B321C6C33900FD68E9 /* InviteeCell.swift */; };
@@ -77,6 +88,12 @@
 		C404D48921C8725500C2FC76 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeVC.swift; path = "WE-DO/Views/WelcomeVC.swift"; sourceTree = SOURCE_ROOT; };
 		C425D90921BFE79D007BF62E /* WDActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDActivityCell.swift; sourceTree = "<group>"; };
 		C425D90A21BFE79D007BF62E /* WDActivityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WDActivityCell.xib; sourceTree = "<group>"; };
+		C429854E21D03BEE00BF8F7F /* GenericPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericPlanCell.swift; sourceTree = "<group>"; };
+		C429854F21D03BEE00BF8F7F /* GenericPlanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericPlanCell.xib; sourceTree = "<group>"; };
+		C429855221D0546200BF8F7F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		C429855321D0546200BF8F7F /* AvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarCell.xib; sourceTree = "<group>"; };
+		C429855621D0F5BB00BF8F7F /* PlanSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanSection.swift; sourceTree = "<group>"; };
+		C429855821D15D2A00BF8F7F /* PlanLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanLogic.swift; sourceTree = "<group>"; };
 		C432E15921CBB27F009C8A2B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C43EED4621BBEAAA00529981 /* AddPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanVC.swift; sourceTree = "<group>"; };
 		C4598DA721B7F72400AB1EAE /* WE-DO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WE-DO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +138,11 @@
 		C4C272C121C0675D00EDED51 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C4D35F8921BC8C32008E27E3 /* MapSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchCell.swift; sourceTree = "<group>"; };
 		C4D35F8A21BC8C32008E27E3 /* MapSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapSearchCell.xib; sourceTree = "<group>"; };
+		C4D8E9E021D349F3005C7B06 /* OverlappingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlappingFlowLayout.swift; sourceTree = "<group>"; };
+		C4D8E9E421D3834D005C7B06 /* WDListFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WDListFooterView.xib; sourceTree = "<group>"; };
+		C4D8E9E821D38E8A005C7B06 /* WDListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDListHeaderView.swift; sourceTree = "<group>"; };
+		C4D8E9E921D38E8A005C7B06 /* WDListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WDListHeaderView.xib; sourceTree = "<group>"; };
+		C4D8E9ED21D3921F005C7B06 /* WDPlanLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDPlanLists.swift; sourceTree = "<group>"; };
 		C4E7E2AF21C6418900FD68E9 /* PlacesPhotoEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPhotoEngine.swift; sourceTree = "<group>"; };
 		C4E7E2B121C6C26400FD68E9 /* InviteeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteeVC.swift; sourceTree = "<group>"; };
 		C4E7E2B321C6C33900FD68E9 /* InviteeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteeCell.swift; sourceTree = "<group>"; };
@@ -161,6 +183,14 @@
 			);
 			name = Auth;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C429854D21D037D400BF8F7F /* SectionContollers */ = {
+			isa = PBXGroup;
+			children = (
+				C429855621D0F5BB00BF8F7F /* PlanSection.swift */,
+			);
+			path = SectionContollers;
 			sourceTree = "<group>";
 		};
 		C4598D9E21B7F72400AB1EAE = {
@@ -223,6 +253,7 @@
 		C49F761E21B9D3CA007A79B8 /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
+				C429854D21D037D400BF8F7F /* SectionContollers */,
 				C404D48821C8716400C2FC76 /* Auth */,
 				C493862921BD7562003C5B4C /* AddPlan Controllers */,
 				C4598DAA21B7F72400AB1EAE /* AppDelegate.swift */,
@@ -254,6 +285,14 @@
 				C4E7E2B421C6C33900FD68E9 /* InviteeCell.xib */,
 				C49D63DB21CC48A20098F4D6 /* SupplemtaryCellTab.swift */,
 				C49D63DC21CC48A20098F4D6 /* SupplemtaryCellTab.xib */,
+				C429854E21D03BEE00BF8F7F /* GenericPlanCell.swift */,
+				C429854F21D03BEE00BF8F7F /* GenericPlanCell.xib */,
+				C429855221D0546200BF8F7F /* AvatarCell.swift */,
+				C429855321D0546200BF8F7F /* AvatarCell.xib */,
+				C4D8E9E021D349F3005C7B06 /* OverlappingFlowLayout.swift */,
+				C4D8E9E421D3834D005C7B06 /* WDListFooterView.xib */,
+				C4D8E9E821D38E8A005C7B06 /* WDListHeaderView.swift */,
+				C4D8E9E921D38E8A005C7B06 /* WDListHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,10 +300,12 @@
 		C49F762021B9D3E0007A79B8 /* Models+ModelLogic */ = {
 			isa = PBXGroup;
 			children = (
+				C4D8E9EC21D391D6005C7B06 /* Wrappers */,
 				C4A19F0721BA8132004ED293 /* WDUser.swift */,
 				C4A19F0B21BA9BCA004ED293 /* WDPlan.swift */,
 				C4A19F0D21BA9BDB004ED293 /* WDActivity.swift */,
 				C4A19F0F21BA9F26004ED293 /* WDTags.swift */,
+				C429855821D15D2A00BF8F7F /* PlanLogic.swift */,
 			);
 			path = "Models+ModelLogic";
 			sourceTree = "<group>";
@@ -292,6 +333,14 @@
 				C470EF6E21C962CA008173C1 /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C4D8E9EC21D391D6005C7B06 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				C4D8E9ED21D3921F005C7B06 /* WDPlanLists.swift */,
+			);
+			path = Wrappers;
 			sourceTree = "<group>";
 		};
 		D57E051C86CBADAF2D874C78 /* Pods */ = {
@@ -399,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D8E9EB21D38E8A005C7B06 /* WDListHeaderView.xib in Resources */,
 				C4598DB521B7F72700AB1EAE /* LaunchScreen.storyboard in Resources */,
 				C4598DB221B7F72700AB1EAE /* Assets.xcassets in Resources */,
 				C4598DB021B7F72400AB1EAE /* Main.storyboard in Resources */,
@@ -407,6 +457,9 @@
 				C479E05721B876D1007D8C10 /* GoogleService-Info.plist in Resources */,
 				C49D63DE21CC48A20098F4D6 /* SupplemtaryCellTab.xib in Resources */,
 				C4D35F8C21BC8C32008E27E3 /* MapSearchCell.xib in Resources */,
+				C4D8E9E521D3834D005C7B06 /* WDListFooterView.xib in Resources */,
+				C429855521D0546200BF8F7F /* AvatarCell.xib in Resources */,
+				C429855121D03BEE00BF8F7F /* GenericPlanCell.xib in Resources */,
 				C425D90C21BFE79D007BF62E /* WDActivityCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,13 +491,11 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -460,13 +511,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -484,6 +533,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WE-DO/Pods-WE-DO-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -491,6 +541,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
@@ -553,6 +604,7 @@
 				C4B635FA21C6E90F00BFC71A /* MaterialView.swift in Sources */,
 				C493863521BD7AD0003C5B4C /* UIColorExtension.swift in Sources */,
 				C49D63DD21CC48A20098F4D6 /* SupplemtaryCellTab.swift in Sources */,
+				C4D8E9E121D349F3005C7B06 /* OverlappingFlowLayout.swift in Sources */,
 				C4B635FB21C6E90F00BFC71A /* ShadowViews.swift in Sources */,
 				C49F762C21B9DA77007A79B8 /* AuthVC.swift in Sources */,
 				C4A19F0A21BA8359004ED293 /* DataService.swift in Sources */,
@@ -564,11 +616,15 @@
 				C4B635FC21C6E90F00BFC71A /* MaterialTextField.swift in Sources */,
 				C4A19F1021BA9F26004ED293 /* WDTags.swift in Sources */,
 				C49F762821B9D4A2007A79B8 /* Extensions.swift in Sources */,
+				C4D8E9EA21D38E8A005C7B06 /* WDListHeaderView.swift in Sources */,
 				C4E7E2B521C6C33900FD68E9 /* InviteeCell.swift in Sources */,
 				C493862B21BD75A4003C5B4C /* PlanMapCVC.swift in Sources */,
+				C429855021D03BEE00BF8F7F /* GenericPlanCell.swift in Sources */,
 				C493863021BD79E5003C5B4C /* PlanTagCells.swift in Sources */,
 				C493862D21BD75DA003C5B4C /* AddActivityCVC.swift in Sources */,
 				C4D35F8B21BC8C32008E27E3 /* MapSearchCell.swift in Sources */,
+				C429855421D0546200BF8F7F /* AvatarCell.swift in Sources */,
+				C4D8E9EE21D3921F005C7B06 /* WDPlanLists.swift in Sources */,
 				C432E15A21CBB27F009C8A2B /* Enums.swift in Sources */,
 				C493863921BD8586003C5B4C /* CustomLabel.swift in Sources */,
 				C470EF6D21C8FCC5008173C1 /* EmailAuthVC.swift in Sources */,
@@ -580,6 +636,7 @@
 				C4B635FD21C6E90F00BFC71A /* GradientView.swift in Sources */,
 				C4E7E2B021C6418900FD68E9 /* PlacesPhotoEngine.swift in Sources */,
 				C404D48A21C8725500C2FC76 /* WelcomeVC.swift in Sources */,
+				C429855721D0F5BB00BF8F7F /* PlanSection.swift in Sources */,
 				C49F762421B9D441007A79B8 /* Constants.swift in Sources */,
 				C493863621BD7AD0003C5B4C /* StringExtension.swift in Sources */,
 				C470EF6F21C962CA008173C1 /* AuthService.swift in Sources */,
@@ -588,6 +645,7 @@
 				C493863721BD7AD0003C5B4C /* UIColorInputError.swift in Sources */,
 				C4A19F1221BAA519004ED293 /* HomeVC.swift in Sources */,
 				C4A19F0821BA8132004ED293 /* WDUser.swift in Sources */,
+				C429855921D15D2A00BF8F7F /* PlanLogic.swift in Sources */,
 				C4FD7B2121C5DEB70098D5A9 /* LoggerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,11 @@ class CustomImageView: UIImageView {
     override func awakeFromNib() {
         self.clipsToBounds = true
         self.layer.cornerRadius = frame.width / 2
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 2
     }
 
 }
+
+
+

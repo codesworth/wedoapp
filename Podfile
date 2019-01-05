@@ -19,6 +19,7 @@ target 'WE-DO' do
       pod 'GooglePlaces'
       pod 'SDWebImage', '~> 4.0'
       pod 'FirebaseUI/Storage', '~> 5.0'
+      pod 'IGListKit', '~> 3.0'
   # Pods for WE-DO
 
   target 'WE-DOTests' do

@@ -145,6 +145,68 @@ extension Date{
     public var unix_ts:Int{
         return Int(timeIntervalSince1970)
     }
+    
+    func nextDayExact()->Date{
+        return addingTimeInterval(TIME_INTERVAL_24_HRS)
+    }
+}
+
+
+extension Dictionary where Key == String{
+    
+    func getString(_ id:Fields)->String{
+        if let field = self[id.rawValue] as? String{
+            return field
+        }
+        return ""
+    }
+    
+    func getDate(_ id:Fields)->Date{
+        if let field = self[id.rawValue] as? Date{
+            return field
+        }
+        return Date.init(timeIntervalSince1970: 0)
+    }
+    
+    func getArray(_ id:Fields)->[Any]{
+        if let field = self[id.rawValue] as? [Any]{
+            return field
+        }
+        return []
+    }
+    
+    func getDouble(id:Fields)->Double{
+        if let field = self[id.rawValue] as? Double{
+            return field
+        }
+        return 0.000001
+    }
+    
+    func getInt(_ id:Fields)->Int{
+        if let field = self[id.rawValue] as? Int{
+            return field
+        }
+        return 0
+    }
+    
+    func getInt64(_ id:Fields)->Int64{
+        if let field = self[id.rawValue] as? Int64{
+            return field
+        }
+        return 0
+    }
+    
+    
+    func getBoolena(_ id:Fields)->Bool{
+        if let field = self[id.rawValue] as? Bool{
+            return field
+        }
+        return false
+    }
+    
+    func allKeys()->Aliases.stray{
+        return (self as NSDictionary).allKeys as! Aliases.stray
+    }
 }
 
 

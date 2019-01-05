@@ -249,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="983.20000000000005" y="918.89055472263874"/>
         </scene>
-        <!--HomeVC-->
+        <!--WE-DO-->
         <scene sceneID="qF8-ig-OpH">
             <objects>
                 <viewController id="cee-fm-d8q" customClass="HomeVC" customModule="WE_DO" customModuleProvider="target" sceneMemberID="viewController">
@@ -304,7 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JgZ-hR-vsd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CgD-GT-kal"/>
+                    <navigationItem key="navigationItem" title="WE-DO" id="CgD-GT-kal"/>
                     <connections>
                         <outlet property="addButt" destination="uwF-fc-olX" id="B6c-8B-KrF"/>
                         <outlet property="collectionview" destination="XI0-pK-GsI" id="fTU-6b-qUB"/>
@@ -420,7 +420,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kNc-sc-jh1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.078431372550000003" green="0.5568627451" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -487,26 +490,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X12-N8-quf">
                                         <rect key="frame" x="0.0" y="491" width="375" height="60"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-gX-ELA">
-                                                <rect key="frame" x="16" y="5" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="oqy-ys-TqB"/>
-                                                    <constraint firstAttribute="height" constant="50" id="xJN-Oi-veA"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NI-Wv-Rfv">
-                                                <rect key="frame" x="74" y="19.5" width="100" height="21"/>
+                                                <rect key="frame" x="16" y="19.5" width="99.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="kIA-xM-NqQ"/>
                                                 </constraints>
@@ -515,7 +500,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 invites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wQ-l8-adg">
-                                                <rect key="frame" x="266" y="19.5" width="101" height="21"/>
+                                                <rect key="frame" x="266.5" y="19.5" width="100.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="ZtG-UC-Esd"/>
                                                 </constraints>
@@ -537,41 +522,65 @@
                                             <constraint firstItem="7wQ-l8-adg" firstAttribute="centerY" secondItem="X12-N8-quf" secondAttribute="centerY" id="ByB-nO-6gx"/>
                                             <constraint firstItem="9NI-Wv-Rfv" firstAttribute="centerY" secondItem="X12-N8-quf" secondAttribute="centerY" id="CbY-k5-D2S"/>
                                             <constraint firstItem="EgV-70-Ec2" firstAttribute="centerY" secondItem="X12-N8-quf" secondAttribute="centerY" id="DIv-yS-mNJ"/>
-                                            <constraint firstItem="fCC-gX-ELA" firstAttribute="leading" secondItem="X12-N8-quf" secondAttribute="leading" constant="16" id="DaF-41-OCA"/>
+                                            <constraint firstItem="9NI-Wv-Rfv" firstAttribute="leading" secondItem="X12-N8-quf" secondAttribute="leading" constant="16" id="Fqh-HV-1kV"/>
                                             <constraint firstAttribute="height" constant="60" id="Ivp-zG-Snb"/>
-                                            <constraint firstItem="fCC-gX-ELA" firstAttribute="centerY" secondItem="X12-N8-quf" secondAttribute="centerY" id="MNN-y7-wvg"/>
                                             <constraint firstItem="EgV-70-Ec2" firstAttribute="height" secondItem="X12-N8-quf" secondAttribute="height" id="aV9-Ma-BNy"/>
-                                            <constraint firstItem="9NI-Wv-Rfv" firstAttribute="leading" secondItem="fCC-gX-ELA" secondAttribute="trailing" constant="8" id="cdk-K3-ECI"/>
                                             <constraint firstAttribute="trailing" secondItem="7wQ-l8-adg" secondAttribute="trailing" constant="8" id="sJA-zR-IRe"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Plan Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRO-63-7cV" customClass="BaseTextField" customModule="WE_DO" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="20" width="359" height="40"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Gjz-4P-DRG"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.18823529410000001" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xhr-do-DEA">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="411"/>
+                                        <rect key="frame" x="0.0" y="119" width="375" height="364"/>
                                         <color key="backgroundColor" white="0.92630391725352113" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="daT-ni-3RM">
+                                        <rect key="frame" x="8" y="16" width="359" height="87"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Plan Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRO-63-7cV" customClass="BaseTextField" customModule="WE_DO" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Gjz-4P-DRG"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.18823529410000001" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Plan Ending Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5C-kw-nnf" customClass="BaseTextField" customModule="WE_DO" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="47" width="359" height="40"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="GWX-2H-jCi"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.18823529410000001" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="G5C-kw-nnf" secondAttribute="trailing" id="MuT-gy-3pX"/>
+                                            <constraint firstAttribute="trailing" secondItem="dRO-63-7cV" secondAttribute="trailing" id="TQY-pl-Wto"/>
+                                            <constraint firstItem="G5C-kw-nnf" firstAttribute="leading" secondItem="daT-ni-3RM" secondAttribute="leading" id="joc-pf-h5o"/>
+                                            <constraint firstItem="dRO-63-7cV" firstAttribute="leading" secondItem="daT-ni-3RM" secondAttribute="leading" id="zIq-Ex-G5t"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="dRO-63-7cV" secondAttribute="trailing" constant="8" id="566-Uu-T6J"/>
                                     <constraint firstItem="wtt-CK-g5k" firstAttribute="top" secondItem="X12-N8-quf" secondAttribute="bottom" constant="8" id="BX0-6b-Mtg"/>
                                     <constraint firstAttribute="trailing" secondItem="Xhr-do-DEA" secondAttribute="trailing" id="Gl5-Zg-fzB"/>
+                                    <constraint firstAttribute="trailing" secondItem="daT-ni-3RM" secondAttribute="trailing" constant="8" id="H7g-em-hng"/>
                                     <constraint firstItem="wtt-CK-g5k" firstAttribute="centerX" secondItem="QSO-rv-Sf1" secondAttribute="centerX" id="JRc-OT-CDb"/>
                                     <constraint firstAttribute="bottom" secondItem="hIv-M2-mWh" secondAttribute="bottom" constant="8" id="JoH-YD-yb3"/>
                                     <constraint firstItem="hIv-M2-mWh" firstAttribute="leading" secondItem="QSO-rv-Sf1" secondAttribute="leading" constant="16" id="Lnm-2p-88e"/>
@@ -579,12 +588,12 @@
                                     <constraint firstItem="X12-N8-quf" firstAttribute="top" secondItem="Xhr-do-DEA" secondAttribute="bottom" constant="8" symbolic="YES" id="ac0-fu-Pum"/>
                                     <constraint firstItem="X12-N8-quf" firstAttribute="leading" secondItem="QSO-rv-Sf1" secondAttribute="leading" id="fsw-wc-UJy"/>
                                     <constraint firstAttribute="bottom" secondItem="wtt-CK-g5k" secondAttribute="bottom" constant="8" id="gds-ew-GTD"/>
-                                    <constraint firstItem="dRO-63-7cV" firstAttribute="top" secondItem="QSO-rv-Sf1" secondAttribute="top" constant="20" id="h5U-Vh-pFs"/>
-                                    <constraint firstItem="Xhr-do-DEA" firstAttribute="top" secondItem="dRO-63-7cV" secondAttribute="bottom" constant="12" id="hgL-Ua-mYv"/>
+                                    <constraint firstItem="daT-ni-3RM" firstAttribute="leading" secondItem="QSO-rv-Sf1" secondAttribute="leading" constant="8" id="iNB-qp-ajb"/>
                                     <constraint firstAttribute="bottom" secondItem="sbh-Nd-CmR" secondAttribute="bottom" constant="8" id="nDd-Hx-cre"/>
                                     <constraint firstAttribute="trailing" secondItem="X12-N8-quf" secondAttribute="trailing" id="nRP-KA-L3b"/>
-                                    <constraint firstItem="dRO-63-7cV" firstAttribute="leading" secondItem="QSO-rv-Sf1" secondAttribute="leading" constant="8" id="sd6-Tl-7S1"/>
+                                    <constraint firstItem="daT-ni-3RM" firstAttribute="top" secondItem="QSO-rv-Sf1" secondAttribute="top" constant="16" id="oGG-Bk-mFX"/>
                                     <constraint firstAttribute="trailing" secondItem="sbh-Nd-CmR" secondAttribute="trailing" constant="16" id="us5-ra-oB8"/>
+                                    <constraint firstItem="Xhr-do-DEA" firstAttribute="top" secondItem="daT-ni-3RM" secondAttribute="bottom" constant="16" id="z3L-gh-c5o"/>
                                 </constraints>
                             </view>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nF8-8p-K1E">
@@ -594,7 +603,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD A PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUD-0f-1Ui">
-                                        <rect key="frame" x="139.5" y="28" width="96" height="24"/>
+                                        <rect key="frame" x="140" y="28" width="95.5" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="j03-QF-ARH"/>
                                         </constraints>
@@ -631,8 +640,8 @@
                     <connections>
                         <outlet property="addActivityButt" destination="wtt-CK-g5k" id="fdX-MH-SLQ"/>
                         <outlet property="cancelButt" destination="hIv-M2-mWh" id="pmy-pR-caR"/>
+                        <outlet property="endDateTxt" destination="G5C-kw-nnf" id="gTa-Bs-thX"/>
                         <outlet property="inviteLabl" destination="7wQ-l8-adg" id="dT1-QK-ydn"/>
-                        <outlet property="inviteimg" destination="fCC-gX-ELA" id="6YH-uw-S8s"/>
                         <outlet property="mapVContainer" destination="nF8-8p-K1E" id="fHK-ZY-4YV"/>
                         <outlet property="sendInviteButt" destination="sbh-Nd-CmR" id="zMz-xH-RmF"/>
                         <outlet property="tableView" destination="Xhr-do-DEA" id="iMg-Gm-ve4"/>

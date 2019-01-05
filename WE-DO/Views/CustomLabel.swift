@@ -24,6 +24,9 @@ class CustomLabel: UILabel {
         
     }
     
+    
+
+    
     func setCornerRadius(radius:CGFloat){
         layer.cornerRadius = radius
     }
